@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.plantilla');
 });
 
-Route::resource('persona', 'App\Http\Controllers\PersonaController');
+Route::resource('clientes', 'App\Http\Controllers\CustomersController');
+Route::resource('categorias', 'App\Http\Controllers\CategoryController');
+Route::resource('productos', 'App\Http\Controllers\ProductController');
